@@ -15,7 +15,7 @@ const urlB64ToUint8Array = base64String => {
 
 const saveSubscription = async subscription => {
   console.log('subscription ', subscription);
-  const SERVER_URL = "https://ceaa-203-96-241-80.ngrok-free.app/save-subscription";
+  const SERVER_URL = "https://fddc-203-96-241-185.ngrok-free.app/save-subscription";
   const response = await fetch(SERVER_URL, {
     method: "post",
     headers: {
