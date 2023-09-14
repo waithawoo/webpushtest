@@ -15,7 +15,7 @@ const urlB64ToUint8Array = base64String => {
 
 const saveSubscription = async subscription => {
   console.log('subscription ', subscription);
-  const SERVER_URL = "http://localhost:4000/save-subscription";
+  const SERVER_URL = "https://ceaa-203-96-241-80.ngrok-free.app/save-subscription";
   const response = await fetch(SERVER_URL, {
     method: "post",
     headers: {
@@ -34,7 +34,7 @@ self.addEventListener("install", async () => {
     );
     const options = { applicationServerKey, userVisibleOnly: true };
     const subscription = await self.registration.pushManager.subscribe(options);
-    // const response = await saveSubscription(subscription);
+    const response = await saveSubscription(subscription);
     console.log('subscription ', JSON.stringify(subscription));
   } catch (err) {
     console.log("Error", err);
